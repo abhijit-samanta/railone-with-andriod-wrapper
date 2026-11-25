@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RailOne</string>
+    <string name="title_activity_main">RailOne</string>
+    <string name="package_name">in.railone.app</string>
+    <string name="custom_url_scheme">in.railone.app</string>
+</resources>

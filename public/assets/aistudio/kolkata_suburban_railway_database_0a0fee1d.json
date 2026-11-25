@@ -1,0 +1,5902 @@
+{
+  "metadata": {
+    "datasetName": "Kolkata Suburban Railway Network",
+    "version": "0.2.0",
+    "generatedOn": "2026-11-19",
+    "country": "India",
+    "state": "West Bengal",
+    "currency": "INR",
+    "distanceUnit": "KM",
+    "status": "development_dataset_partial_verification",
+    "notes": [
+      "Route master covers the corridors requested by the project owner.",
+      "Only station sequences with source-supported details are populated in this starter file.",
+      "A route's stationKm is measured from that route's declared origin; it is not necessarily the official fare distance.",
+      "Fare rules are intentionally empty until current official suburban fare tables are verified.",
+      "Do not calculate or sell real tickets using illustrative or incomplete data."
+    ],
+    "dataModel": "single_file_graph_database",
+    "importantWarning": "This is a consolidated development database, not a certified complete fare dataset. Several requested corridors still need verified station sequences, exact station codes and official fare distances. Do not sell tickets or quote official fares from unverified fields.",
+    "sources": [
+      "Eastern Railway Combined Suburban Time Table 2019-2020 (official; historical timetable)",
+      "Eastern Railway System Map 2026 (official)",
+      "Eastern line (Kolkata Suburban Railway) station tables (secondary source)",
+      "South Eastern line (Kolkata Suburban Railway) station tables (secondary source)"
+    ]
+  },
+  "zones": [
+    {
+      "zoneId": "ER",
+      "zoneName": "Eastern Railway",
+      "divisions": [
+        {
+          "divisionId": "ER_HWH",
+          "divisionName": "Howrah",
+          "routes": [
+            {
+              "routeId": "ER_HWH_MAIN",
+              "routeName": "Howrah - Barddhaman Main Line",
+              "corridor": "Main Line",
+              "origin": "HWH",
+              "destination": "BWN",
+              "stationSequenceStatus": "source_listed_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "HWH",
+                  "stationName": "Howrah Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "LLH",
+                  "stationName": "Liluah",
+                  "stationKm": 5
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "BEQ",
+                  "stationName": "Belur",
+                  "stationKm": 6
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "BLY",
+                  "stationName": "Bally",
+                  "stationKm": 8
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "UPA",
+                  "stationName": "Uttarpara",
+                  "stationKm": 10
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "HMZ",
+                  "stationName": "Hind Motor",
+                  "stationKm": 12
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "KOG",
+                  "stationName": "Konnagar",
+                  "stationKm": 13
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "RIS",
+                  "stationName": "Rishra",
+                  "stationKm": 16
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "SRP",
+                  "stationName": "Shrirampur",
+                  "stationKm": 20
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "SHE",
+                  "stationName": "Seoraphuli Junction",
+                  "stationKm": 22
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "BBAE",
+                  "stationName": "Baidyabati",
+                  "stationKm": 24
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "BHR",
+                  "stationName": "Bhadreswar",
+                  "stationKm": 28
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "MUU",
+                  "stationName": "Mankundu",
+                  "stationKm": 30
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "CGR",
+                  "stationName": "Chandannagar",
+                  "stationKm": 33
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "CNS",
+                  "stationName": "Chuchura",
+                  "stationKm": 36
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "HGY",
+                  "stationName": "Hooghly",
+                  "stationKm": 38
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "BDC",
+                  "stationName": "Bandel Junction",
+                  "stationKm": 39
+                },
+                {
+                  "sequence": 18,
+                  "stationCode": "ADST",
+                  "stationName": "Adi Saptagram",
+                  "stationKm": 43
+                },
+                {
+                  "sequence": 19,
+                  "stationCode": "MUG",
+                  "stationName": "Magra",
+                  "stationKm": 47
+                },
+                {
+                  "sequence": 20,
+                  "stationCode": "TLO",
+                  "stationName": "Talandu",
+                  "stationKm": 50
+                },
+                {
+                  "sequence": 21,
+                  "stationCode": "KHN",
+                  "stationName": "Khanyan",
+                  "stationKm": 55
+                },
+                {
+                  "sequence": 22,
+                  "stationCode": "PDA",
+                  "stationName": "Pundooah",
+                  "stationKm": 61
+                },
+                {
+                  "sequence": 23,
+                  "stationCode": "SLG",
+                  "stationName": "Simlagarh",
+                  "stationKm": 66
+                },
+                {
+                  "sequence": 24,
+                  "stationCode": "BCGM",
+                  "stationName": "Bainchigram",
+                  "stationKm": 68
+                },
+                {
+                  "sequence": 25,
+                  "stationCode": "BOI",
+                  "stationName": "Bainchi",
+                  "stationKm": 70
+                },
+                {
+                  "sequence": 26,
+                  "stationCode": "DBP",
+                  "stationName": "Debipur",
+                  "stationKm": 75
+                },
+                {
+                  "sequence": 27,
+                  "stationCode": "BGF",
+                  "stationName": "Bagila",
+                  "stationKm": 79
+                },
+                {
+                  "sequence": 28,
+                  "stationCode": "MYM",
+                  "stationName": "Memari",
+                  "stationKm": 82
+                },
+                {
+                  "sequence": 29,
+                  "stationCode": "NMF",
+                  "stationName": "Nimo",
+                  "stationKm": 85
+                },
+                {
+                  "sequence": 30,
+                  "stationCode": "RSLR",
+                  "stationName": "Rasulpur",
+                  "stationKm": 88
+                },
+                {
+                  "sequence": 31,
+                  "stationCode": "PLAE",
+                  "stationName": "Palsit",
+                  "stationKm": 92
+                },
+                {
+                  "sequence": 32,
+                  "stationCode": "SKG",
+                  "stationName": "Saktigarh",
+                  "stationKm": 95
+                },
+                {
+                  "sequence": 33,
+                  "stationCode": "GRP",
+                  "stationName": "Gangpur",
+                  "stationKm": 100
+                },
+                {
+                  "sequence": 34,
+                  "stationCode": "BWN",
+                  "stationName": "Barddhaman Junction",
+                  "stationKm": 107
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "ER_HWH_CHORD",
+              "routeName": "Howrah - Barddhaman Chord Line",
+              "corridor": "Chord Line",
+              "origin": "HWH",
+              "destination": "BWN",
+              "stationSequenceStatus": "source_listed_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "HWH",
+                  "stationName": "Howrah Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "LLH",
+                  "stationName": "Liluah",
+                  "stationKm": 5
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "BEQ",
+                  "stationName": "Belur",
+                  "stationKm": 6
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "BLY",
+                  "stationName": "Bally",
+                  "stationKm": 8
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": null,
+                  "stationName": "Belanagar",
+                  "stationKm": 11
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "DKAE",
+                  "stationName": "Dankuni Junction",
+                  "stationKm": 15
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": null,
+                  "stationName": "Gobra",
+                  "stationKm": 17
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": null,
+                  "stationName": "Janai Road",
+                  "stationKm": 20
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": null,
+                  "stationName": "Begampur",
+                  "stationKm": 22
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": null,
+                  "stationName": "Baruipara",
+                  "stationKm": 26
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": null,
+                  "stationName": "Mirzapur-Bankipur",
+                  "stationKm": 29
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": null,
+                  "stationName": "Balarambati",
+                  "stationKm": 31
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "KQLS",
+                  "stationName": "Kamarkundu",
+                  "stationKm": 33
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": null,
+                  "stationName": "Madhusudanpur",
+                  "stationKm": 36
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "CDAE",
+                  "stationName": "Chandanpur",
+                  "stationKm": 40
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": null,
+                  "stationName": "Porabazar",
+                  "stationKm": 45
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "BMAE",
+                  "stationName": "Belmuri",
+                  "stationKm": 46
+                },
+                {
+                  "sequence": 18,
+                  "stationCode": null,
+                  "stationName": "Dhaniakhali",
+                  "stationKm": 49
+                },
+                {
+                  "sequence": 19,
+                  "stationCode": "SHBC",
+                  "stationName": "Sibaichandi",
+                  "stationKm": 51
+                },
+                {
+                  "sequence": 20,
+                  "stationCode": null,
+                  "stationName": "Cheragram",
+                  "stationKm": 53
+                },
+                {
+                  "sequence": 21,
+                  "stationCode": "HGY",
+                  "stationName": "Hajigarh",
+                  "stationKm": 55
+                },
+                {
+                  "sequence": 22,
+                  "stationCode": null,
+                  "stationName": "Gurap",
+                  "stationKm": 58
+                },
+                {
+                  "sequence": 23,
+                  "stationCode": null,
+                  "stationName": "Jhapandanga",
+                  "stationKm": 62
+                },
+                {
+                  "sequence": 24,
+                  "stationCode": null,
+                  "stationName": "Jaugram",
+                  "stationKm": 65
+                },
+                {
+                  "sequence": 25,
+                  "stationCode": null,
+                  "stationName": "Nabagram",
+                  "stationKm": 69
+                },
+                {
+                  "sequence": 26,
+                  "stationCode": "MSAE",
+                  "stationName": "Masagram",
+                  "stationKm": 72
+                },
+                {
+                  "sequence": 27,
+                  "stationCode": null,
+                  "stationName": "Chanchai",
+                  "stationKm": 75
+                },
+                {
+                  "sequence": 28,
+                  "stationCode": null,
+                  "stationName": "Palla Road",
+                  "stationKm": 78
+                },
+                {
+                  "sequence": 29,
+                  "stationCode": "SKG",
+                  "stationName": "Saktigarh",
+                  "stationKm": 83
+                },
+                {
+                  "sequence": 30,
+                  "stationCode": "GRP",
+                  "stationName": "Gangpur",
+                  "stationKm": 88
+                },
+                {
+                  "sequence": 31,
+                  "stationCode": "BWN",
+                  "stationName": "Barddhaman Junction",
+                  "stationKm": 95
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "ER_TARAKESWAR_GOGHAT",
+              "routeName": "Seoraphuli - Tarakeswar - Goghat",
+              "corridor": "Tarakeswar Branch",
+              "origin": "SHE",
+              "destination": "GOGT",
+              "stationSequenceStatus": "provisional_route_list",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "SHE",
+                  "stationName": "Seoraphuli Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "DEA",
+                  "stationName": "Diara",
+                  "stationKm": 6
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "NSF",
+                  "stationName": "Nasibpur",
+                  "stationKm": 8
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "SIU",
+                  "stationName": "Singur",
+                  "stationKm": 12
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "KQLS",
+                  "stationName": "Kamarkundu",
+                  "stationKm": 14
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "NKL",
+                  "stationName": "Nalikul",
+                  "stationKm": 18
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "MLYA",
+                  "stationName": "Maliya",
+                  "stationKm": 22
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "HPL",
+                  "stationName": "Haripal",
+                  "stationKm": 23
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "KKAE",
+                  "stationName": "Kaikala",
+                  "stationKm": 26
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "BAHW",
+                  "stationName": "Bahirkhanda",
+                  "stationKm": 29
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "LOK",
+                  "stationName": "Loknath",
+                  "stationKm": 33
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "TAK",
+                  "stationName": "Tarakeswar",
+                  "stationKm": 36
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "TLPH",
+                  "stationName": "Talpur Halt",
+                  "stationKm": 41
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "TKPH",
+                  "stationName": "Takipur Halt",
+                  "stationKm": 46
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "MAYP",
+                  "stationName": "Mayapur",
+                  "stationKm": 52
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "AMBG",
+                  "stationName": "Arambagh",
+                  "stationKm": 61
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "GOGT",
+                  "stationName": "Goghat",
+                  "stationKm": null
+                }
+              ],
+              "extensionToGoghat": [
+                {
+                  "sequence": 13,
+                  "stationCode": "TLPH",
+                  "stationName": "Talpur Halt",
+                  "stationKm": 39
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "TKPH",
+                  "stationName": "Takipur Halt",
+                  "stationKm": 44
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "MAYP",
+                  "stationName": "Mayapur",
+                  "stationKm": 51
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "AMBG",
+                  "stationName": "Arambagh",
+                  "stationKm": 60
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "GOGT",
+                  "stationName": "Goghat",
+                  "stationKm": 69
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "ER_BANDEL_KATWA",
+              "routeName": "Bandel - Katwa",
+              "corridor": "Bandel-Katwa",
+              "origin": "BDC",
+              "destination": "KWAE",
+              "stationSequenceStatus": "populated_provisional",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "BDC",
+                  "stationName": "Bandel Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "BSAE",
+                  "stationName": "Bansberia",
+                  "stationKm": 4
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "IPRA",
+                  "stationName": "Hazi Md Mohsin Halt",
+                  "stationKm": 6
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "TBAE",
+                  "stationName": "Tribeni",
+                  "stationKm": 8
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "KJU",
+                  "stationName": "Kuntighat",
+                  "stationKm": 11
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "DMLE",
+                  "stationName": "Dumurdaha",
+                  "stationKm": 15
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "KMAE",
+                  "stationName": "Khamargachhi",
+                  "stationKm": 17
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "JIT",
+                  "stationName": "Jirat",
+                  "stationKm": 22
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "BGAE",
+                  "stationName": "Balagarh",
+                  "stationKm": 25
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "SOAE",
+                  "stationName": "Somra Bazar",
+                  "stationKm": 28
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "BHLA",
+                  "stationName": "Behula",
+                  "stationKm": 33
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "GPAE",
+                  "stationName": "Guptipara",
+                  "stationKm": 35
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "ABKA",
+                  "stationName": "Ambika Kalna",
+                  "stationKm": 42
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "BGRA",
+                  "stationName": "Baghnapara",
+                  "stationKm": 46
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "DTAE",
+                  "stationName": "Dhatrigram",
+                  "stationKm": 51
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "NDIM",
+                  "stationName": "Nandaigram Halt",
+                  "stationKm": 54
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "SMAE",
+                  "stationName": "Samudra Garh",
+                  "stationKm": 58
+                },
+                {
+                  "sequence": 18,
+                  "stationCode": "KLNT",
+                  "stationName": "Kalinagar",
+                  "stationKm": 61
+                },
+                {
+                  "sequence": 19,
+                  "stationCode": "NDAE",
+                  "stationName": "Nabadwip Dham",
+                  "stationKm": 66
+                },
+                {
+                  "sequence": 20,
+                  "stationCode": "VSPR",
+                  "stationName": "Bishnupriya",
+                  "stationKm": 67
+                },
+                {
+                  "sequence": 21,
+                  "stationCode": "BFZ",
+                  "stationName": "Bhandartikuri",
+                  "stationKm": 71
+                },
+                {
+                  "sequence": 22,
+                  "stationCode": "PSAE",
+                  "stationName": "Purbasthali",
+                  "stationKm": 73
+                },
+                {
+                  "sequence": 23,
+                  "stationCode": "MTFA",
+                  "stationName": "Mertala Phaleya",
+                  "stationKm": 76
+                },
+                {
+                  "sequence": 24,
+                  "stationCode": "LKX",
+                  "stationName": "Lakshmipur",
+                  "stationKm": 79
+                },
+                {
+                  "sequence": 25,
+                  "stationCode": "BQY",
+                  "stationName": "Belerhat",
+                  "stationKm": 82
+                },
+                {
+                  "sequence": 26,
+                  "stationCode": "PTAE",
+                  "stationName": "Patuli",
+                  "stationKm": 87
+                },
+                {
+                  "sequence": 27,
+                  "stationCode": "AGAE",
+                  "stationName": "Agradwip",
+                  "stationKm": 92
+                },
+                {
+                  "sequence": 28,
+                  "stationCode": "SHBA",
+                  "stationName": "Sahebtala Halt",
+                  "stationKm": 95
+                },
+                {
+                  "sequence": 29,
+                  "stationCode": "DHAE",
+                  "stationName": "Dainhat",
+                  "stationKm": 98
+                },
+                {
+                  "sequence": 30,
+                  "stationCode": "KWAE",
+                  "stationName": "Katwa Junction",
+                  "stationKm": 105
+                }
+              ]
+            },
+            {
+              "routeId": "ER_BWN_KATWA",
+              "routeName": "Barddhaman - Katwa",
+              "corridor": "Barddhaman-Katwa",
+              "origin": "BWN",
+              "destination": "KWAE",
+              "stationSequenceStatus": "source_listed_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "BWN",
+                  "stationName": "Barddhaman Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "KAN",
+                  "stationName": "Kamnara",
+                  "stationKm": 6
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "KJRA",
+                  "stationName": "Khetia",
+                  "stationKm": 7
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "CMDG",
+                  "stationName": "Chamardighi",
+                  "stationKm": 10
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "KJME",
+                  "stationName": "Karjana",
+                  "stationKm": 11
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "KJRM",
+                  "stationName": "Karjanagram",
+                  "stationKm": 12
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "ARNB",
+                  "stationName": "Amarun",
+                  "stationKm": 15
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "BGNA",
+                  "stationName": "Bhatar",
+                  "stationKm": 19
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "BGNA2",
+                  "stationName": "Balgona",
+                  "stationKm": 25
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "SOF",
+                  "stationName": "Saota",
+                  "stationKm": 30
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "NGX",
+                  "stationName": "Nigan",
+                  "stationKm": 32
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "KCY",
+                  "stationName": "Kaichar",
+                  "stationKm": 36
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "BKS",
+                  "stationName": "Bankapasi",
+                  "stationKm": 41
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "SIZ",
+                  "stationName": "Shrikhanda",
+                  "stationKm": 45
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "SHKL",
+                  "stationName": "Shripat Shrikhanda",
+                  "stationKm": 46
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "KWAE",
+                  "stationName": "Katwa Junction",
+                  "stationKm": 53
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "ER_BELUR_MATH",
+              "routeName": "Howrah - Belur Math",
+              "corridor": "Belur Math Branch",
+              "origin": "HWH",
+              "destination": "BRMH",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            }
+          ]
+        },
+        {
+          "divisionId": "ER_SDAH",
+          "divisionName": "Sealdah",
+          "routes": [
+            {
+              "routeId": "ER_SDAH_GEDE",
+              "routeName": "Sealdah - Gede",
+              "corridor": "Main Line",
+              "origin": "SDAH",
+              "destination": "GEDE",
+              "stationSequenceStatus": "source_train_timetable_km",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "SDAH",
+                  "stationName": "Sealdah",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "BNXR",
+                  "stationName": "Bidhannagar Road",
+                  "stationKm": 4
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "DDJ",
+                  "stationName": "Dum Dum Junction",
+                  "stationKm": 7
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "BLH",
+                  "stationName": "Belgharia",
+                  "stationKm": 11
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "AGP",
+                  "stationName": "Agarpara",
+                  "stationKm": 14
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "SEP",
+                  "stationName": "Sodpur",
+                  "stationKm": 16
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "KDH",
+                  "stationName": "Khardaha",
+                  "stationKm": 19
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "TGH",
+                  "stationName": "Titagarh",
+                  "stationKm": 20
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "BP",
+                  "stationName": "Barrackpore",
+                  "stationKm": 22
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "PTF",
+                  "stationName": "Palta",
+                  "stationKm": 25
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "IP",
+                  "stationName": "Ichhapur",
+                  "stationKm": 27
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "SNR",
+                  "stationName": "Shyamnagar",
+                  "stationKm": 30
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "JGDL",
+                  "stationName": "Jagaddal",
+                  "stationKm": 33
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "KNR",
+                  "stationName": "Kankinara",
+                  "stationKm": 35
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "NH",
+                  "stationName": "Naihati Junction",
+                  "stationKm": 38
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "HLR",
+                  "stationName": "Halisahar",
+                  "stationKm": 42
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "KPA",
+                  "stationName": "Kanchrapara",
+                  "stationKm": 45
+                },
+                {
+                  "sequence": 18,
+                  "stationCode": "KYI",
+                  "stationName": "Kalyani",
+                  "stationKm": 48
+                },
+                {
+                  "sequence": 19,
+                  "stationCode": "MPJ",
+                  "stationName": "Madanpur",
+                  "stationKm": 53
+                },
+                {
+                  "sequence": 20,
+                  "stationCode": "SMX",
+                  "stationName": "Simurali",
+                  "stationKm": 57
+                },
+                {
+                  "sequence": 21,
+                  "stationCode": "PXR",
+                  "stationName": "Palpara",
+                  "stationKm": 60
+                },
+                {
+                  "sequence": 22,
+                  "stationCode": "CDH",
+                  "stationName": "Chakdaha",
+                  "stationKm": 62
+                },
+                {
+                  "sequence": 23,
+                  "stationCode": "PDX",
+                  "stationName": "Payradanga",
+                  "stationKm": 68
+                },
+                {
+                  "sequence": 24,
+                  "stationCode": "RHA",
+                  "stationName": "Ranaghat Junction",
+                  "stationKm": 73
+                },
+                {
+                  "sequence": 25,
+                  "stationCode": "BNKA",
+                  "stationName": "Bankim Nagar",
+                  "stationKm": 78
+                },
+                {
+                  "sequence": 26,
+                  "stationCode": "PNCB",
+                  "stationName": "Panchberia Halt",
+                  "stationKm": 80
+                },
+                {
+                  "sequence": 27,
+                  "stationCode": "AG",
+                  "stationName": "Aranghata",
+                  "stationKm": 82
+                },
+                {
+                  "sequence": 28,
+                  "stationCode": "BHGH",
+                  "stationName": "Bhairgachhi",
+                  "stationKm": 87
+                },
+                {
+                  "sequence": 29,
+                  "stationCode": "SNTR",
+                  "stationName": "Shantinagar Halt",
+                  "stationKm": 88
+                },
+                {
+                  "sequence": 30,
+                  "stationCode": "BHNA",
+                  "stationName": "Bhayna",
+                  "stationKm": 91
+                },
+                {
+                  "sequence": 31,
+                  "stationCode": "BGL",
+                  "stationName": "Bagula",
+                  "stationKm": 93
+                },
+                {
+                  "sequence": 32,
+                  "stationCode": "MYHT",
+                  "stationName": "Mayurhat",
+                  "stationKm": 97
+                },
+                {
+                  "sequence": 33,
+                  "stationCode": "TNX",
+                  "stationName": "Tarak Nagar",
+                  "stationKm": 100
+                },
+                {
+                  "sequence": 34,
+                  "stationCode": "MIJ",
+                  "stationName": "Majhdia",
+                  "stationKm": 105
+                },
+                {
+                  "sequence": 35,
+                  "stationCode": "BPN",
+                  "stationName": "Banpur",
+                  "stationKm": 111
+                },
+                {
+                  "sequence": 36,
+                  "stationCode": "HRSR",
+                  "stationName": "Harish Nagar Halt",
+                  "stationKm": 114
+                },
+                {
+                  "sequence": 37,
+                  "stationCode": "GEDE",
+                  "stationName": "Gede",
+                  "stationKm": 116
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "ER_RANAGHAT_KRISHNANAGAR",
+              "routeName": "Ranaghat - Krishnanagar",
+              "corridor": "Krishnanagar Branch",
+              "origin": "RHA",
+              "destination": "KNJ",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_KALINARAYANPUR_SHANTIPUR",
+              "routeName": "Kalinarayanpur - Shantipur",
+              "corridor": "Shantipur Branch",
+              "origin": "KLNP",
+              "destination": "STB",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_RANAGHAT_BANGAON",
+              "routeName": "Ranaghat - Bangaon",
+              "corridor": "Bangaon Branch",
+              "origin": "RHA",
+              "destination": "BNJ",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_SEALDAH_BANGAON",
+              "routeName": "Sealdah - Bangaon via Dum Dum",
+              "corridor": "Bangaon via Dum Dum",
+              "origin": "SDAH",
+              "destination": "BNJ",
+              "stationSequenceStatus": "source_route_map_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "SDAH",
+                  "stationName": "Sealdah",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "BNXR",
+                  "stationName": "Bidhannagar Road",
+                  "stationKm": 4
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "DDJ",
+                  "stationName": "Dum Dum Junction",
+                  "stationKm": 7
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "DDC",
+                  "stationName": "Dum Dum Cantonment",
+                  "stationKm": 10
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "DGNR",
+                  "stationName": "Durganagar",
+                  "stationKm": 12
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "BBT",
+                  "stationName": "Birati",
+                  "stationKm": 14
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "BESB",
+                  "stationName": "Bisharpara Kodaliya",
+                  "stationKm": 15
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "NBE",
+                  "stationName": "New Barrackpore",
+                  "stationKm": 17
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "MMG",
+                  "stationName": "Madhyamgram",
+                  "stationKm": 19
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "HHR",
+                  "stationName": "Hridaypur",
+                  "stationKm": 21
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "BT",
+                  "stationName": "Barasat Junction",
+                  "stationKm": 23
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "BMG",
+                  "stationName": "Bamangachhi",
+                  "stationKm": 27
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "DTK",
+                  "stationName": "Duttapukur",
+                  "stationKm": 30
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "SXC",
+                  "stationName": "Sondalia",
+                  "stationKm": 32
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "BIRA",
+                  "stationName": "Bira",
+                  "stationKm": 34
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "GUMA",
+                  "stationName": "Guma",
+                  "stationKm": 38
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "ASKR",
+                  "stationName": "Ashoknagar Road",
+                  "stationKm": 41
+                },
+                {
+                  "sequence": 18,
+                  "stationCode": "HB",
+                  "stationName": "Habra",
+                  "stationKm": 45
+                },
+                {
+                  "sequence": 19,
+                  "stationCode": "SNHT",
+                  "stationName": "Sanhati Halt",
+                  "stationKm": 50
+                },
+                {
+                  "sequence": 20,
+                  "stationCode": "MSL",
+                  "stationName": "Machlandapur",
+                  "stationKm": 54
+                },
+                {
+                  "sequence": 21,
+                  "stationCode": "GBG",
+                  "stationName": "Gobardanga",
+                  "stationKm": 58
+                },
+                {
+                  "sequence": 22,
+                  "stationCode": "TKNR",
+                  "stationName": "Thakurnagar",
+                  "stationKm": 63
+                },
+                {
+                  "sequence": 23,
+                  "stationCode": "BNJ",
+                  "stationName": "Bangaon Junction",
+                  "stationKm": 77
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "ER_BARASAT_HASNABAD",
+              "routeName": "Barasat - Hasnabad",
+              "corridor": "Hasnabad Branch",
+              "origin": "BT",
+              "destination": "HNB",
+              "stationSequenceStatus": "station_order_needs_validation",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "BT",
+                  "stationName": "Barasat Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "BMG",
+                  "stationName": "Bamangachhi",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "DTK",
+                  "stationName": "Duttapukur",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "SXC",
+                  "stationName": "Sondalia",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "BIRA",
+                  "stationName": "Bira",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "GUMA",
+                  "stationName": "Guma",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "ASKR",
+                  "stationName": "Ashoknagar Road",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "HB",
+                  "stationName": "Habra",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "SNHT",
+                  "stationName": "Sanhati Halt",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "MSL",
+                  "stationName": "Machlandapur",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "GBG",
+                  "stationName": "Gobardanga",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "TKNR",
+                  "stationName": "Thakurnagar",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "BNJ",
+                  "stationName": "Bangaon Junction",
+                  "stationKm": null
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "HNB",
+                  "stationName": "Hasnabad",
+                  "stationKm": null
+                }
+              ],
+              "distanceStatus": "partial_or_unverified"
+            },
+            {
+              "routeId": "ER_NAIHATI_BANDEL",
+              "routeName": "Naihati - Bandel",
+              "corridor": "Hooghly Branch",
+              "origin": "NH",
+              "destination": "BDC",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_KALYANI_SIMANTA",
+              "routeName": "Kalyani - Kalyani Simanta",
+              "corridor": "Kalyani Branch",
+              "origin": "KYI",
+              "destination": "KLYM",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_KRISHNANAGAR_LALGOLA",
+              "routeName": "Krishnanagar - Lalgola",
+              "corridor": "Lalgola Branch",
+              "origin": "KNJ",
+              "destination": "LGL",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            }
+          ]
+        },
+        {
+          "divisionId": "ER_SDAH_SOUTH",
+          "divisionName": "Sealdah South",
+          "routes": [
+            {
+              "routeId": "ER_SEALDAH_NAMKHANA",
+              "routeName": "Sealdah - Namkhana",
+              "corridor": "Main Line",
+              "origin": "SDAH",
+              "destination": "NMKA",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_BALLYGUNGE_BUDGE_BUDGE",
+              "routeName": "Ballygunge - Budge Budge",
+              "corridor": "Budge Budge Branch",
+              "origin": "BLN",
+              "destination": "BGB",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_SONARPUR_CANNING",
+              "routeName": "Sonarpur - Canning",
+              "corridor": "Canning Branch",
+              "origin": "SPR",
+              "destination": "CG",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_BARUIPUR_DIAMOND_HARBOUR",
+              "routeName": "Baruipur - Diamond Harbour",
+              "corridor": "Diamond Harbour Branch",
+              "origin": "BRP",
+              "destination": "DH",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            }
+          ]
+        },
+        {
+          "divisionId": "ER_CHORD_LINK",
+          "divisionName": "Chord Link",
+          "routes": [
+            {
+              "routeId": "ER_SEALDAH_DANKUNI",
+              "routeName": "Sealdah - Dankuni",
+              "corridor": "Main Link",
+              "origin": "SDAH",
+              "destination": "DKAE",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "ER_DANKUNI_ANDUL",
+              "routeName": "Dankuni - Andul",
+              "corridor": "Connecting Link",
+              "origin": "DKAE",
+              "destination": "ADL",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            }
+          ]
+        },
+        {
+          "divisionId": "ER_CIRCULAR",
+          "divisionName": "Circular Railway",
+          "routes": [
+            {
+              "routeId": "ER_CIRCULAR_DUMDUM_MAJERHAT",
+              "routeName": "Dum Dum - Majerhat Circular Line",
+              "corridor": "Circular Line",
+              "origin": "DDJ",
+              "destination": "MJT",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "zoneId": "SER",
+      "zoneName": "South Eastern Railway",
+      "divisions": [
+        {
+          "divisionId": "SER_HWH",
+          "divisionName": "Kharagpur / Howrah suburban area",
+          "routes": [
+            {
+              "routeId": "SER_HWH_MIDNAPORE",
+              "routeName": "Howrah - Midnapore",
+              "corridor": "Main Line",
+              "origin": "HWH",
+              "destination": "MDN",
+              "stationSequenceStatus": "source_listed_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "HWH",
+                  "stationName": "Howrah Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "TPKR",
+                  "stationName": "Tikiapara",
+                  "stationKm": 3
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "DSNR",
+                  "stationName": "Dasnagar",
+                  "stationKm": 4
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "RMJ",
+                  "stationName": "Ramrajatala",
+                  "stationKm": 6
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "SRC",
+                  "stationName": "Santragachi Junction",
+                  "stationKm": 7
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "MRGM",
+                  "stationName": "Mourigram",
+                  "stationKm": 11
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "ADL",
+                  "stationName": "Andul",
+                  "stationKm": 12
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "SEL",
+                  "stationName": "Sankrail",
+                  "stationKm": 16
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "ABB",
+                  "stationName": "Abada",
+                  "stationKm": 18
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "NALR",
+                  "stationName": "Nalpur",
+                  "stationKm": 20
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "BVA",
+                  "stationName": "Bauria",
+                  "stationKm": 24
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "CGA",
+                  "stationName": "Chengel",
+                  "stationKm": 27
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "FLR",
+                  "stationName": "Phuleswar",
+                  "stationKm": 30
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "ULB",
+                  "stationName": "Uluberia",
+                  "stationKm": 32
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "BSBP",
+                  "stationName": "Bir Shibpur",
+                  "stationKm": 36
+                },
+                {
+                  "sequence": 16,
+                  "stationCode": "KGY",
+                  "stationName": "Kulgachia",
+                  "stationKm": 40
+                },
+                {
+                  "sequence": 17,
+                  "stationCode": "BZN",
+                  "stationName": "Bagnan",
+                  "stationKm": 45
+                },
+                {
+                  "sequence": 18,
+                  "stationCode": "GGTA",
+                  "stationName": "Ghoraghata",
+                  "stationKm": 48
+                },
+                {
+                  "sequence": 19,
+                  "stationCode": "DTE",
+                  "stationName": "Deulti",
+                  "stationKm": 51
+                },
+                {
+                  "sequence": 20,
+                  "stationCode": "KIG",
+                  "stationName": "Kolaghat",
+                  "stationKm": 55
+                },
+                {
+                  "sequence": 21,
+                  "stationCode": "MCA",
+                  "stationName": "Mecheda",
+                  "stationKm": 58
+                },
+                {
+                  "sequence": 22,
+                  "stationCode": "NDGJ",
+                  "stationName": "Nandaigajan",
+                  "stationKm": 61
+                },
+                {
+                  "sequence": 23,
+                  "stationCode": "BOP",
+                  "stationName": "Bhogpur",
+                  "stationKm": 64
+                },
+                {
+                  "sequence": 24,
+                  "stationCode": "NPMR",
+                  "stationName": "Narayan Pakuria Murail",
+                  "stationKm": 67
+                },
+                {
+                  "sequence": 25,
+                  "stationCode": "PKU",
+                  "stationName": "Panskura Junction",
+                  "stationKm": 71
+                },
+                {
+                  "sequence": 26,
+                  "stationCode": "KHAI",
+                  "stationName": "Khirai",
+                  "stationKm": 76
+                },
+                {
+                  "sequence": 27,
+                  "stationCode": "HAUR",
+                  "stationName": "Haur",
+                  "stationKm": 80
+                },
+                {
+                  "sequence": 28,
+                  "stationCode": "RDU",
+                  "stationName": "Radhamohanpur",
+                  "stationKm": 85
+                },
+                {
+                  "sequence": 29,
+                  "stationCode": "DUAN",
+                  "stationName": "Duan",
+                  "stationKm": 88
+                },
+                {
+                  "sequence": 30,
+                  "stationCode": "BCK",
+                  "stationName": "Balichak",
+                  "stationKm": 91
+                },
+                {
+                  "sequence": 31,
+                  "stationCode": "SMCK",
+                  "stationName": "Shyamchak",
+                  "stationKm": 96
+                },
+                {
+                  "sequence": 32,
+                  "stationCode": "MPD",
+                  "stationName": "Madpur",
+                  "stationKm": 102
+                },
+                {
+                  "sequence": 33,
+                  "stationCode": "JPR",
+                  "stationName": "Jakpur",
+                  "stationKm": 108
+                },
+                {
+                  "sequence": 34,
+                  "stationCode": "KGP",
+                  "stationName": "Kharagpur Junction",
+                  "stationKm": 115
+                },
+                {
+                  "sequence": 35,
+                  "stationCode": "GMDN",
+                  "stationName": "Girimaidan",
+                  "stationKm": 117
+                },
+                {
+                  "sequence": 36,
+                  "stationCode": "GKL",
+                  "stationName": "Gokulpur",
+                  "stationKm": 121
+                },
+                {
+                  "sequence": 37,
+                  "stationCode": "CSY",
+                  "stationName": "Cossye Halt",
+                  "stationKm": 125
+                },
+                {
+                  "sequence": 38,
+                  "stationCode": "MDN",
+                  "stationName": "Midnapore",
+                  "stationKm": 128
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "SER_SHALIMAR_AMTA",
+              "routeName": "Shalimar - Amta",
+              "corridor": "West Branch",
+              "origin": "SHM",
+              "destination": "AMZ",
+              "stationSequenceStatus": "pending_verification",
+              "stations": []
+            },
+            {
+              "routeId": "SER_PANSKURA_HALDIA",
+              "routeName": "Panskura - Haldia",
+              "corridor": "Southeast Branch",
+              "origin": "PKU",
+              "destination": "HLZ",
+              "stationSequenceStatus": "source_listed_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "PKU",
+                  "stationName": "Panskura Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "RGX",
+                  "stationName": "Raghunathbari",
+                  "stationKm": 8
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "RGA",
+                  "stationName": "Rajgoda",
+                  "stationKm": 16
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "SMTG",
+                  "stationName": "Sahid Matangini",
+                  "stationKm": 21
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "TMZ",
+                  "stationName": "Tamluk Junction",
+                  "stationKm": 24
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "KSBP",
+                  "stationName": "Keshabpur",
+                  "stationKm": 31
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "SSPH",
+                  "stationName": "Satish Samanta Halt",
+                  "stationKm": 36
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "MSDL",
+                  "stationName": "Mahishadal",
+                  "stationKm": 39
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "BRDB",
+                  "stationName": "Barda",
+                  "stationKm": 47
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "BYSA",
+                  "stationName": "Basulya Sutahata",
+                  "stationKm": 53
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "DZK",
+                  "stationName": "Durgachak",
+                  "stationKm": 59
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "DZKT",
+                  "stationName": "Durgachak Town",
+                  "stationKm": 62
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "SLPR",
+                  "stationName": "Silpaprabesh",
+                  "stationKm": 65
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "BAAR",
+                  "stationName": "Bandar",
+                  "stationKm": 67
+                },
+                {
+                  "sequence": 15,
+                  "stationCode": "HLZ",
+                  "stationName": "Haldia",
+                  "stationKm": 69
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            },
+            {
+              "routeId": "SER_TAMLUK_DIGHA",
+              "routeName": "Tamluk - Digha",
+              "corridor": "South Branch",
+              "origin": "TMZ",
+              "destination": "DGHA",
+              "stationSequenceStatus": "source_listed_km_partial",
+              "stations": [
+                {
+                  "sequence": 1,
+                  "stationCode": "TMZ",
+                  "stationName": "Tamluk Junction",
+                  "stationKm": 0
+                },
+                {
+                  "sequence": 2,
+                  "stationCode": "NDKR",
+                  "stationName": "Nandakumar",
+                  "stationKm": 10
+                },
+                {
+                  "sequence": 3,
+                  "stationCode": "LSGS",
+                  "stationName": "Lavan Satyagrah Smarak",
+                  "stationKm": 21
+                },
+                {
+                  "sequence": 4,
+                  "stationCode": "DSPN",
+                  "stationName": "Deshapran",
+                  "stationKm": 32
+                },
+                {
+                  "sequence": 5,
+                  "stationCode": "HEN",
+                  "stationName": "Henria",
+                  "stationKm": 39
+                },
+                {
+                  "sequence": 6,
+                  "stationCode": "NCN",
+                  "stationName": "Nachinda",
+                  "stationKm": 51
+                },
+                {
+                  "sequence": 7,
+                  "stationCode": "KATI",
+                  "stationName": "Kanthi",
+                  "stationKm": 62
+                },
+                {
+                  "sequence": 8,
+                  "stationCode": "STLB",
+                  "stationName": "Sitalpur",
+                  "stationKm": 68
+                },
+                {
+                  "sequence": 9,
+                  "stationCode": "SJPA",
+                  "stationName": "Sujalpur",
+                  "stationKm": 71
+                },
+                {
+                  "sequence": 10,
+                  "stationCode": "APRD",
+                  "stationName": "Ashapurna Devi",
+                  "stationKm": 76
+                },
+                {
+                  "sequence": 11,
+                  "stationCode": "BDPA",
+                  "stationName": "Badalpur",
+                  "stationKm": 78
+                },
+                {
+                  "sequence": 12,
+                  "stationCode": "RMRB",
+                  "stationName": "Ramnagar",
+                  "stationKm": 86
+                },
+                {
+                  "sequence": 13,
+                  "stationCode": "TKRA",
+                  "stationName": "Tikra",
+                  "stationKm": 88
+                },
+                {
+                  "sequence": 14,
+                  "stationCode": "DGHA",
+                  "stationName": "Digha",
+                  "stationKm": 94
+                }
+              ],
+              "distanceStatus": "provisional_source_km"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interchanges": [
+    {
+      "stationCode": "HWH",
+      "connectedRouteIds": [
+        "ER_HWH_MAIN",
+        "ER_HWH_CHORD",
+        "ER_BELUR_MATH",
+        "SER_HWH_MIDNAPORE"
+      ],
+      "verificationStatus": "verify_operational_connectivity"
+    },
+    {
+      "stationCode": "BDC",
+      "connectedRouteIds": [
+        "ER_HWH_MAIN",
+        "ER_BANDEL_KATWA",
+        "ER_NAIHATI_BANDEL"
+      ],
+      "verificationStatus": "verify_operational_connectivity"
+    },
+    {
+      "stationCode": "BWN",
+      "connectedRouteIds": [
+        "ER_HWH_MAIN",
+        "ER_HWH_CHORD",
+        "ER_BWN_KATWA"
+      ],
+      "verificationStatus": "verify_operational_connectivity"
+    },
+    {
+      "stationCode": "SHE",
+      "connectedRouteIds": [
+        "ER_TARAKESWAR_GOGHAT"
+      ],
+      "verificationStatus": "verify_operational_connectivity"
+    },
+    {
+      "stationCode": "DKAE",
+      "connectedRouteIds": [
+        "ER_HWH_CHORD",
+        "ER_SEALDAH_DANKUNI",
+        "ER_DANKUNI_ANDUL"
+      ],
+      "verificationStatus": "verify_operational_connectivity"
+    },
+    {
+      "stationCode": "ADL",
+      "connectedRouteIds": [
+        "ER_DANKUNI_ANDUL",
+        "SER_HWH_MIDNAPORE"
+      ],
+      "verificationStatus": "verify_operational_connectivity"
+    }
+  ],
+  "fareRules": {
+    "status": "not_populated_official_table_required",
+    "currency": "INR",
+    "amountUnit": "paise",
+    "fareTypes": [
+      "single",
+      "return",
+      "season"
+    ],
+    "classes": [
+      "second",
+      "first"
+    ],
+    "rules": [],
+    "calculationPolicy": "Use official fare distance and effective fare slab, not straight-line distance or an invented per-km rate."
+  },
+  "stations": [
+    {
+      "stationId": "HWH",
+      "stationCode": "HWH",
+      "stationName": "Howrah Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "LLH",
+      "stationCode": "LLH",
+      "stationName": "Liluah",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BEQ",
+      "stationCode": "BEQ",
+      "stationName": "Belur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BLY",
+      "stationCode": "BLY",
+      "stationName": "Bally",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "UPA",
+      "stationCode": "UPA",
+      "stationName": "Uttarpara",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HMZ",
+      "stationCode": "HMZ",
+      "stationName": "Hind Motor",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KOG",
+      "stationCode": "KOG",
+      "stationName": "Konnagar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RIS",
+      "stationCode": "RIS",
+      "stationName": "Rishra",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SRP",
+      "stationCode": "SRP",
+      "stationName": "Shrirampur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SHE",
+      "stationCode": "SHE",
+      "stationName": "Seoraphuli Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BBAE",
+      "stationCode": "BBAE",
+      "stationName": "Baidyabati",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BHR",
+      "stationCode": "BHR",
+      "stationName": "Bhadreswar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MUU",
+      "stationCode": "MUU",
+      "stationName": "Mankundu",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CGR",
+      "stationCode": "CGR",
+      "stationName": "Chandannagar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CNS",
+      "stationCode": "CNS",
+      "stationName": "Chuchura",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HGY",
+      "stationCode": "HGY",
+      "stationName": "Hooghly",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BDC",
+      "stationCode": "BDC",
+      "stationName": "Bandel Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ADST",
+      "stationCode": "ADST",
+      "stationName": "Adi Saptagram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MUG",
+      "stationCode": "MUG",
+      "stationName": "Magra",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TLO",
+      "stationCode": "TLO",
+      "stationName": "Talandu",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KHN",
+      "stationCode": "KHN",
+      "stationName": "Khanyan",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PDA",
+      "stationCode": "PDA",
+      "stationName": "Pundooah",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SLG",
+      "stationCode": "SLG",
+      "stationName": "Simlagarh",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BCGM",
+      "stationCode": "BCGM",
+      "stationName": "Bainchigram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BOI",
+      "stationCode": "BOI",
+      "stationName": "Bainchi",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DBP",
+      "stationCode": "DBP",
+      "stationName": "Debipur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BGF",
+      "stationCode": "BGF",
+      "stationName": "Bagila",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MYM",
+      "stationCode": "MYM",
+      "stationName": "Memari",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NMF",
+      "stationCode": "NMF",
+      "stationName": "Nimo",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RSLR",
+      "stationCode": "RSLR",
+      "stationName": "Rasulpur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PLAE",
+      "stationCode": "PLAE",
+      "stationName": "Palsit",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SKG",
+      "stationCode": "SKG",
+      "stationName": "Saktigarh",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GRP",
+      "stationCode": "GRP",
+      "stationName": "Gangpur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BWN",
+      "stationCode": "BWN",
+      "stationName": "Barddhaman Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "belanagar",
+      "stationCode": null,
+      "stationName": "Belanagar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DKAE",
+      "stationCode": "DKAE",
+      "stationName": "Dankuni Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "gobra",
+      "stationCode": null,
+      "stationName": "Gobra",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "janai_road",
+      "stationCode": null,
+      "stationName": "Janai Road",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "begampur",
+      "stationCode": null,
+      "stationName": "Begampur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "baruipara",
+      "stationCode": null,
+      "stationName": "Baruipara",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "mirzapur-bankipur",
+      "stationCode": null,
+      "stationName": "Mirzapur-Bankipur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "balarambati",
+      "stationCode": null,
+      "stationName": "Balarambati",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KQLS",
+      "stationCode": "KQLS",
+      "stationName": "Kamarkundu",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "madhusudanpur",
+      "stationCode": null,
+      "stationName": "Madhusudanpur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CDAE",
+      "stationCode": "CDAE",
+      "stationName": "Chandanpur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "porabazar",
+      "stationCode": null,
+      "stationName": "Porabazar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BMAE",
+      "stationCode": "BMAE",
+      "stationName": "Belmuri",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "dhaniakhali",
+      "stationCode": null,
+      "stationName": "Dhaniakhali",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SHBC",
+      "stationCode": "SHBC",
+      "stationName": "Sibaichandi",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "cheragram",
+      "stationCode": null,
+      "stationName": "Cheragram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "gurap",
+      "stationCode": null,
+      "stationName": "Gurap",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "jhapandanga",
+      "stationCode": null,
+      "stationName": "Jhapandanga",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "jaugram",
+      "stationCode": null,
+      "stationName": "Jaugram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "nabagram",
+      "stationCode": null,
+      "stationName": "Nabagram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MSAE",
+      "stationCode": "MSAE",
+      "stationName": "Masagram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "chanchai",
+      "stationCode": null,
+      "stationName": "Chanchai",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "palla_road",
+      "stationCode": null,
+      "stationName": "Palla Road",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DEA",
+      "stationCode": "DEA",
+      "stationName": "Diara",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NSF",
+      "stationCode": "NSF",
+      "stationName": "Nasibpur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SIU",
+      "stationCode": "SIU",
+      "stationName": "Singur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NKL",
+      "stationCode": "NKL",
+      "stationName": "Nalikul",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MLYA",
+      "stationCode": "MLYA",
+      "stationName": "Maliya",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HPL",
+      "stationCode": "HPL",
+      "stationName": "Haripal",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KKAE",
+      "stationCode": "KKAE",
+      "stationName": "Kaikala",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BAHW",
+      "stationCode": "BAHW",
+      "stationName": "Bahirkhanda",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "LOK",
+      "stationCode": "LOK",
+      "stationName": "Loknath",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TAK",
+      "stationCode": "TAK",
+      "stationName": "Tarakeswar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TLPH",
+      "stationCode": "TLPH",
+      "stationName": "Talpur Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TKPH",
+      "stationCode": "TKPH",
+      "stationName": "Takipur Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MAYP",
+      "stationCode": "MAYP",
+      "stationName": "Mayapur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "AMBG",
+      "stationCode": "AMBG",
+      "stationName": "Arambagh",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GOGT",
+      "stationCode": "GOGT",
+      "stationName": "Goghat",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BSAE",
+      "stationCode": "BSAE",
+      "stationName": "Bansberia",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "IPRA",
+      "stationCode": "IPRA",
+      "stationName": "Hazi Md Mohsin Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TBAE",
+      "stationCode": "TBAE",
+      "stationName": "Tribeni",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KJU",
+      "stationCode": "KJU",
+      "stationName": "Kuntighat",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DMLE",
+      "stationCode": "DMLE",
+      "stationName": "Dumurdaha",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KMAE",
+      "stationCode": "KMAE",
+      "stationName": "Khamargachhi",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "JIT",
+      "stationCode": "JIT",
+      "stationName": "Jirat",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BGAE",
+      "stationCode": "BGAE",
+      "stationName": "Balagarh",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SOAE",
+      "stationCode": "SOAE",
+      "stationName": "Somra Bazar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BHLA",
+      "stationCode": "BHLA",
+      "stationName": "Behula",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GPAE",
+      "stationCode": "GPAE",
+      "stationName": "Guptipara",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ABKA",
+      "stationCode": "ABKA",
+      "stationName": "Ambika Kalna",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BGRA",
+      "stationCode": "BGRA",
+      "stationName": "Baghnapara",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DTAE",
+      "stationCode": "DTAE",
+      "stationName": "Dhatrigram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NDIM",
+      "stationCode": "NDIM",
+      "stationName": "Nandaigram Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SMAE",
+      "stationCode": "SMAE",
+      "stationName": "Samudra Garh",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KLNT",
+      "stationCode": "KLNT",
+      "stationName": "Kalinagar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NDAE",
+      "stationCode": "NDAE",
+      "stationName": "Nabadwip Dham",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "VSPR",
+      "stationCode": "VSPR",
+      "stationName": "Bishnupriya",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BFZ",
+      "stationCode": "BFZ",
+      "stationName": "Bhandartikuri",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PSAE",
+      "stationCode": "PSAE",
+      "stationName": "Purbasthali",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MTFA",
+      "stationCode": "MTFA",
+      "stationName": "Mertala Phaleya",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "LKX",
+      "stationCode": "LKX",
+      "stationName": "Lakshmipur",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BQY",
+      "stationCode": "BQY",
+      "stationName": "Belerhat",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PTAE",
+      "stationCode": "PTAE",
+      "stationName": "Patuli",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "AGAE",
+      "stationCode": "AGAE",
+      "stationName": "Agradwip",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SHBA",
+      "stationCode": "SHBA",
+      "stationName": "Sahebtala Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DHAE",
+      "stationCode": "DHAE",
+      "stationName": "Dainhat",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KWAE",
+      "stationCode": "KWAE",
+      "stationName": "Katwa Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KAN",
+      "stationCode": "KAN",
+      "stationName": "Kamnara",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KJRA",
+      "stationCode": "KJRA",
+      "stationName": "Khetia",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CMDG",
+      "stationCode": "CMDG",
+      "stationName": "Chamardighi",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KJME",
+      "stationCode": "KJME",
+      "stationName": "Karjana",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KJRM",
+      "stationCode": "KJRM",
+      "stationName": "Karjanagram",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ARNB",
+      "stationCode": "ARNB",
+      "stationName": "Amarun",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BGNA",
+      "stationCode": "BGNA",
+      "stationName": "Bhatar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BGNA2",
+      "stationCode": "BGNA2",
+      "stationName": "Balgona",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SOF",
+      "stationCode": "SOF",
+      "stationName": "Saota",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NGX",
+      "stationCode": "NGX",
+      "stationName": "Nigan",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KCY",
+      "stationCode": "KCY",
+      "stationName": "Kaichar",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BKS",
+      "stationCode": "BKS",
+      "stationName": "Bankapasi",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SIZ",
+      "stationCode": "SIZ",
+      "stationName": "Shrikhanda",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SHKL",
+      "stationCode": "SHKL",
+      "stationName": "Shripat Shrikhanda",
+      "zoneId": "ER",
+      "divisionId": "ER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SDAH",
+      "stationCode": "SDAH",
+      "stationName": "Sealdah",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BNXR",
+      "stationCode": "BNXR",
+      "stationName": "Bidhannagar Road",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DDJ",
+      "stationCode": "DDJ",
+      "stationName": "Dum Dum Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BLH",
+      "stationCode": "BLH",
+      "stationName": "Belgharia",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "AGP",
+      "stationCode": "AGP",
+      "stationName": "Agarpara",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SEP",
+      "stationCode": "SEP",
+      "stationName": "Sodpur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KDH",
+      "stationCode": "KDH",
+      "stationName": "Khardaha",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TGH",
+      "stationCode": "TGH",
+      "stationName": "Titagarh",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BP",
+      "stationCode": "BP",
+      "stationName": "Barrackpore",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PTF",
+      "stationCode": "PTF",
+      "stationName": "Palta",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "IP",
+      "stationCode": "IP",
+      "stationName": "Ichhapur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SNR",
+      "stationCode": "SNR",
+      "stationName": "Shyamnagar",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "JGDL",
+      "stationCode": "JGDL",
+      "stationName": "Jagaddal",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KNR",
+      "stationCode": "KNR",
+      "stationName": "Kankinara",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NH",
+      "stationCode": "NH",
+      "stationName": "Naihati Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HLR",
+      "stationCode": "HLR",
+      "stationName": "Halisahar",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KPA",
+      "stationCode": "KPA",
+      "stationName": "Kanchrapara",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KYI",
+      "stationCode": "KYI",
+      "stationName": "Kalyani",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MPJ",
+      "stationCode": "MPJ",
+      "stationName": "Madanpur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SMX",
+      "stationCode": "SMX",
+      "stationName": "Simurali",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PXR",
+      "stationCode": "PXR",
+      "stationName": "Palpara",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CDH",
+      "stationCode": "CDH",
+      "stationName": "Chakdaha",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PDX",
+      "stationCode": "PDX",
+      "stationName": "Payradanga",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RHA",
+      "stationCode": "RHA",
+      "stationName": "Ranaghat Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BNKA",
+      "stationCode": "BNKA",
+      "stationName": "Bankim Nagar",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PNCB",
+      "stationCode": "PNCB",
+      "stationName": "Panchberia Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "AG",
+      "stationCode": "AG",
+      "stationName": "Aranghata",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BHGH",
+      "stationCode": "BHGH",
+      "stationName": "Bhairgachhi",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SNTR",
+      "stationCode": "SNTR",
+      "stationName": "Shantinagar Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BHNA",
+      "stationCode": "BHNA",
+      "stationName": "Bhayna",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BGL",
+      "stationCode": "BGL",
+      "stationName": "Bagula",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MYHT",
+      "stationCode": "MYHT",
+      "stationName": "Mayurhat",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TNX",
+      "stationCode": "TNX",
+      "stationName": "Tarak Nagar",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MIJ",
+      "stationCode": "MIJ",
+      "stationName": "Majhdia",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BPN",
+      "stationCode": "BPN",
+      "stationName": "Banpur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HRSR",
+      "stationCode": "HRSR",
+      "stationName": "Harish Nagar Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GEDE",
+      "stationCode": "GEDE",
+      "stationName": "Gede",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DDC",
+      "stationCode": "DDC",
+      "stationName": "Dum Dum Cantonment",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DGNR",
+      "stationCode": "DGNR",
+      "stationName": "Durganagar",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BBT",
+      "stationCode": "BBT",
+      "stationName": "Birati",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BESB",
+      "stationCode": "BESB",
+      "stationName": "Bisharpara Kodaliya",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NBE",
+      "stationCode": "NBE",
+      "stationName": "New Barrackpore",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MMG",
+      "stationCode": "MMG",
+      "stationName": "Madhyamgram",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HHR",
+      "stationCode": "HHR",
+      "stationName": "Hridaypur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BT",
+      "stationCode": "BT",
+      "stationName": "Barasat Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BMG",
+      "stationCode": "BMG",
+      "stationName": "Bamangachhi",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DTK",
+      "stationCode": "DTK",
+      "stationName": "Duttapukur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SXC",
+      "stationCode": "SXC",
+      "stationName": "Sondalia",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BIRA",
+      "stationCode": "BIRA",
+      "stationName": "Bira",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GUMA",
+      "stationCode": "GUMA",
+      "stationName": "Guma",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ASKR",
+      "stationCode": "ASKR",
+      "stationName": "Ashoknagar Road",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HB",
+      "stationCode": "HB",
+      "stationName": "Habra",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SNHT",
+      "stationCode": "SNHT",
+      "stationName": "Sanhati Halt",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MSL",
+      "stationCode": "MSL",
+      "stationName": "Machlandapur",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GBG",
+      "stationCode": "GBG",
+      "stationName": "Gobardanga",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TKNR",
+      "stationCode": "TKNR",
+      "stationName": "Thakurnagar",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BNJ",
+      "stationCode": "BNJ",
+      "stationName": "Bangaon Junction",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HNB",
+      "stationCode": "HNB",
+      "stationName": "Hasnabad",
+      "zoneId": "ER",
+      "divisionId": "ER_SDAH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TPKR",
+      "stationCode": "TPKR",
+      "stationName": "Tikiapara",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DSNR",
+      "stationCode": "DSNR",
+      "stationName": "Dasnagar",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RMJ",
+      "stationCode": "RMJ",
+      "stationName": "Ramrajatala",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SRC",
+      "stationCode": "SRC",
+      "stationName": "Santragachi Junction",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MRGM",
+      "stationCode": "MRGM",
+      "stationName": "Mourigram",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ADL",
+      "stationCode": "ADL",
+      "stationName": "Andul",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SEL",
+      "stationCode": "SEL",
+      "stationName": "Sankrail",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ABB",
+      "stationCode": "ABB",
+      "stationName": "Abada",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NALR",
+      "stationCode": "NALR",
+      "stationName": "Nalpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BVA",
+      "stationCode": "BVA",
+      "stationName": "Bauria",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CGA",
+      "stationCode": "CGA",
+      "stationName": "Chengel",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "FLR",
+      "stationCode": "FLR",
+      "stationName": "Phuleswar",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "ULB",
+      "stationCode": "ULB",
+      "stationName": "Uluberia",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BSBP",
+      "stationCode": "BSBP",
+      "stationName": "Bir Shibpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KGY",
+      "stationCode": "KGY",
+      "stationName": "Kulgachia",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BZN",
+      "stationCode": "BZN",
+      "stationName": "Bagnan",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GGTA",
+      "stationCode": "GGTA",
+      "stationName": "Ghoraghata",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DTE",
+      "stationCode": "DTE",
+      "stationName": "Deulti",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KIG",
+      "stationCode": "KIG",
+      "stationName": "Kolaghat",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MCA",
+      "stationCode": "MCA",
+      "stationName": "Mecheda",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NDGJ",
+      "stationCode": "NDGJ",
+      "stationName": "Nandaigajan",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BOP",
+      "stationCode": "BOP",
+      "stationName": "Bhogpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NPMR",
+      "stationCode": "NPMR",
+      "stationName": "Narayan Pakuria Murail",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "PKU",
+      "stationCode": "PKU",
+      "stationName": "Panskura Junction",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KHAI",
+      "stationCode": "KHAI",
+      "stationName": "Khirai",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HAUR",
+      "stationCode": "HAUR",
+      "stationName": "Haur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RDU",
+      "stationCode": "RDU",
+      "stationName": "Radhamohanpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DUAN",
+      "stationCode": "DUAN",
+      "stationName": "Duan",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BCK",
+      "stationCode": "BCK",
+      "stationName": "Balichak",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SMCK",
+      "stationCode": "SMCK",
+      "stationName": "Shyamchak",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MPD",
+      "stationCode": "MPD",
+      "stationName": "Madpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "JPR",
+      "stationCode": "JPR",
+      "stationName": "Jakpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KGP",
+      "stationCode": "KGP",
+      "stationName": "Kharagpur Junction",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GMDN",
+      "stationCode": "GMDN",
+      "stationName": "Girimaidan",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "GKL",
+      "stationCode": "GKL",
+      "stationName": "Gokulpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "CSY",
+      "stationCode": "CSY",
+      "stationName": "Cossye Halt",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MDN",
+      "stationCode": "MDN",
+      "stationName": "Midnapore",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RGX",
+      "stationCode": "RGX",
+      "stationName": "Raghunathbari",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RGA",
+      "stationCode": "RGA",
+      "stationName": "Rajgoda",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SMTG",
+      "stationCode": "SMTG",
+      "stationName": "Sahid Matangini",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TMZ",
+      "stationCode": "TMZ",
+      "stationName": "Tamluk Junction",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": true,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KSBP",
+      "stationCode": "KSBP",
+      "stationName": "Keshabpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SSPH",
+      "stationCode": "SSPH",
+      "stationName": "Satish Samanta Halt",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "MSDL",
+      "stationCode": "MSDL",
+      "stationName": "Mahishadal",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BRDB",
+      "stationCode": "BRDB",
+      "stationName": "Barda",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BYSA",
+      "stationCode": "BYSA",
+      "stationName": "Basulya Sutahata",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DZK",
+      "stationCode": "DZK",
+      "stationName": "Durgachak",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DZKT",
+      "stationCode": "DZKT",
+      "stationName": "Durgachak Town",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SLPR",
+      "stationCode": "SLPR",
+      "stationName": "Silpaprabesh",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BAAR",
+      "stationCode": "BAAR",
+      "stationName": "Bandar",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HLZ",
+      "stationCode": "HLZ",
+      "stationName": "Haldia",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NDKR",
+      "stationCode": "NDKR",
+      "stationName": "Nandakumar",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "LSGS",
+      "stationCode": "LSGS",
+      "stationName": "Lavan Satyagrah Smarak",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DSPN",
+      "stationCode": "DSPN",
+      "stationName": "Deshapran",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "HEN",
+      "stationCode": "HEN",
+      "stationName": "Henria",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "NCN",
+      "stationCode": "NCN",
+      "stationName": "Nachinda",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "KATI",
+      "stationCode": "KATI",
+      "stationName": "Kanthi",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "STLB",
+      "stationCode": "STLB",
+      "stationName": "Sitalpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "SJPA",
+      "stationCode": "SJPA",
+      "stationName": "Sujalpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "APRD",
+      "stationCode": "APRD",
+      "stationName": "Ashapurna Devi",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "BDPA",
+      "stationCode": "BDPA",
+      "stationName": "Badalpur",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "RMRB",
+      "stationCode": "RMRB",
+      "stationName": "Ramnagar",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "TKRA",
+      "stationCode": "TKRA",
+      "stationName": "Tikra",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    },
+    {
+      "stationId": "DGHA",
+      "stationCode": "DGHA",
+      "stationName": "Digha",
+      "zoneId": "SER",
+      "divisionId": "SER_HWH",
+      "isJunction": false,
+      "dataStatus": "provisional"
+    }
+  ],
+  "trackSegments": [
+    {
+      "fromStationCode": "HWH",
+      "toStationCode": "LLH",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "LLH",
+      "toStationCode": "BEQ",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BEQ",
+      "toStationCode": "BLY",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BLY",
+      "toStationCode": "UPA",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "UPA",
+      "toStationCode": "HMZ",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HMZ",
+      "toStationCode": "KOG",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KOG",
+      "toStationCode": "RIS",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RIS",
+      "toStationCode": "SRP",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SRP",
+      "toStationCode": "SHE",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SHE",
+      "toStationCode": "BBAE",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BBAE",
+      "toStationCode": "BHR",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BHR",
+      "toStationCode": "MUU",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MUU",
+      "toStationCode": "CGR",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CGR",
+      "toStationCode": "CNS",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CNS",
+      "toStationCode": "HGY",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HGY",
+      "toStationCode": "BDC",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BDC",
+      "toStationCode": "ADST",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ADST",
+      "toStationCode": "MUG",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MUG",
+      "toStationCode": "TLO",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TLO",
+      "toStationCode": "KHN",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KHN",
+      "toStationCode": "PDA",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PDA",
+      "toStationCode": "SLG",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SLG",
+      "toStationCode": "BCGM",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BCGM",
+      "toStationCode": "BOI",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BOI",
+      "toStationCode": "DBP",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DBP",
+      "toStationCode": "BGF",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BGF",
+      "toStationCode": "MYM",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MYM",
+      "toStationCode": "NMF",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NMF",
+      "toStationCode": "RSLR",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RSLR",
+      "toStationCode": "PLAE",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PLAE",
+      "toStationCode": "SKG",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SKG",
+      "toStationCode": "GRP",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GRP",
+      "toStationCode": "BWN",
+      "routeId": "ER_HWH_MAIN",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HWH",
+      "toStationCode": "LLH",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "LLH",
+      "toStationCode": "BEQ",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BEQ",
+      "toStationCode": "BLY",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BLY",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "DKAE",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DKAE",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "KQLS",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KQLS",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "CDAE",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CDAE",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "BMAE",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BMAE",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "SHBC",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SHBC",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "HGY",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HGY",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "MSAE",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MSAE",
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": null,
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": null,
+      "toStationCode": "SKG",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SKG",
+      "toStationCode": "GRP",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GRP",
+      "toStationCode": "BWN",
+      "routeId": "ER_HWH_CHORD",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SHE",
+      "toStationCode": "DEA",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DEA",
+      "toStationCode": "NSF",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NSF",
+      "toStationCode": "SIU",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SIU",
+      "toStationCode": "KQLS",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KQLS",
+      "toStationCode": "NKL",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NKL",
+      "toStationCode": "MLYA",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MLYA",
+      "toStationCode": "HPL",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HPL",
+      "toStationCode": "KKAE",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KKAE",
+      "toStationCode": "BAHW",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BAHW",
+      "toStationCode": "LOK",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "LOK",
+      "toStationCode": "TAK",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TAK",
+      "toStationCode": "TLPH",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TLPH",
+      "toStationCode": "TKPH",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TKPH",
+      "toStationCode": "MAYP",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MAYP",
+      "toStationCode": "AMBG",
+      "routeId": "ER_TARAKESWAR_GOGHAT",
+      "distanceKm": 9,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BDC",
+      "toStationCode": "BSAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BSAE",
+      "toStationCode": "IPRA",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "IPRA",
+      "toStationCode": "TBAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TBAE",
+      "toStationCode": "KJU",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KJU",
+      "toStationCode": "DMLE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DMLE",
+      "toStationCode": "KMAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KMAE",
+      "toStationCode": "JIT",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "JIT",
+      "toStationCode": "BGAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BGAE",
+      "toStationCode": "SOAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SOAE",
+      "toStationCode": "BHLA",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BHLA",
+      "toStationCode": "GPAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GPAE",
+      "toStationCode": "ABKA",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ABKA",
+      "toStationCode": "BGRA",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BGRA",
+      "toStationCode": "DTAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DTAE",
+      "toStationCode": "NDIM",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NDIM",
+      "toStationCode": "SMAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SMAE",
+      "toStationCode": "KLNT",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KLNT",
+      "toStationCode": "NDAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NDAE",
+      "toStationCode": "VSPR",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "VSPR",
+      "toStationCode": "BFZ",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BFZ",
+      "toStationCode": "PSAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PSAE",
+      "toStationCode": "MTFA",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MTFA",
+      "toStationCode": "LKX",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "LKX",
+      "toStationCode": "BQY",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BQY",
+      "toStationCode": "PTAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PTAE",
+      "toStationCode": "AGAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "AGAE",
+      "toStationCode": "SHBA",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SHBA",
+      "toStationCode": "DHAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DHAE",
+      "toStationCode": "KWAE",
+      "routeId": "ER_BANDEL_KATWA",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BWN",
+      "toStationCode": "KAN",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KAN",
+      "toStationCode": "KJRA",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KJRA",
+      "toStationCode": "CMDG",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CMDG",
+      "toStationCode": "KJME",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KJME",
+      "toStationCode": "KJRM",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KJRM",
+      "toStationCode": "ARNB",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ARNB",
+      "toStationCode": "BGNA",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BGNA",
+      "toStationCode": "BGNA2",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BGNA2",
+      "toStationCode": "SOF",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SOF",
+      "toStationCode": "NGX",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NGX",
+      "toStationCode": "KCY",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KCY",
+      "toStationCode": "BKS",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BKS",
+      "toStationCode": "SIZ",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SIZ",
+      "toStationCode": "SHKL",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SHKL",
+      "toStationCode": "KWAE",
+      "routeId": "ER_BWN_KATWA",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SDAH",
+      "toStationCode": "BNXR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BNXR",
+      "toStationCode": "DDJ",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DDJ",
+      "toStationCode": "BLH",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BLH",
+      "toStationCode": "AGP",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "AGP",
+      "toStationCode": "SEP",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SEP",
+      "toStationCode": "KDH",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KDH",
+      "toStationCode": "TGH",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TGH",
+      "toStationCode": "BP",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BP",
+      "toStationCode": "PTF",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PTF",
+      "toStationCode": "IP",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "IP",
+      "toStationCode": "SNR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SNR",
+      "toStationCode": "JGDL",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "JGDL",
+      "toStationCode": "KNR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KNR",
+      "toStationCode": "NH",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NH",
+      "toStationCode": "HLR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HLR",
+      "toStationCode": "KPA",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KPA",
+      "toStationCode": "KYI",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KYI",
+      "toStationCode": "MPJ",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MPJ",
+      "toStationCode": "SMX",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SMX",
+      "toStationCode": "PXR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PXR",
+      "toStationCode": "CDH",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CDH",
+      "toStationCode": "PDX",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PDX",
+      "toStationCode": "RHA",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RHA",
+      "toStationCode": "BNKA",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BNKA",
+      "toStationCode": "PNCB",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PNCB",
+      "toStationCode": "AG",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "AG",
+      "toStationCode": "BHGH",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BHGH",
+      "toStationCode": "SNTR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SNTR",
+      "toStationCode": "BHNA",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BHNA",
+      "toStationCode": "BGL",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BGL",
+      "toStationCode": "MYHT",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MYHT",
+      "toStationCode": "TNX",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TNX",
+      "toStationCode": "MIJ",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MIJ",
+      "toStationCode": "BPN",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BPN",
+      "toStationCode": "HRSR",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HRSR",
+      "toStationCode": "GEDE",
+      "routeId": "ER_SDAH_GEDE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SDAH",
+      "toStationCode": "BNXR",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BNXR",
+      "toStationCode": "DDJ",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DDJ",
+      "toStationCode": "DDC",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DDC",
+      "toStationCode": "DGNR",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DGNR",
+      "toStationCode": "BBT",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BBT",
+      "toStationCode": "BESB",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BESB",
+      "toStationCode": "NBE",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NBE",
+      "toStationCode": "MMG",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MMG",
+      "toStationCode": "HHR",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HHR",
+      "toStationCode": "BT",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BT",
+      "toStationCode": "BMG",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BMG",
+      "toStationCode": "DTK",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DTK",
+      "toStationCode": "SXC",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SXC",
+      "toStationCode": "BIRA",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BIRA",
+      "toStationCode": "GUMA",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GUMA",
+      "toStationCode": "ASKR",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ASKR",
+      "toStationCode": "HB",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HB",
+      "toStationCode": "SNHT",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SNHT",
+      "toStationCode": "MSL",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MSL",
+      "toStationCode": "GBG",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GBG",
+      "toStationCode": "TKNR",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TKNR",
+      "toStationCode": "BNJ",
+      "routeId": "ER_SEALDAH_BANGAON",
+      "distanceKm": 14,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HWH",
+      "toStationCode": "TPKR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TPKR",
+      "toStationCode": "DSNR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DSNR",
+      "toStationCode": "RMJ",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RMJ",
+      "toStationCode": "SRC",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SRC",
+      "toStationCode": "MRGM",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MRGM",
+      "toStationCode": "ADL",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 1,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ADL",
+      "toStationCode": "SEL",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SEL",
+      "toStationCode": "ABB",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ABB",
+      "toStationCode": "NALR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NALR",
+      "toStationCode": "BVA",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BVA",
+      "toStationCode": "CGA",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CGA",
+      "toStationCode": "FLR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "FLR",
+      "toStationCode": "ULB",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "ULB",
+      "toStationCode": "BSBP",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BSBP",
+      "toStationCode": "KGY",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KGY",
+      "toStationCode": "BZN",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BZN",
+      "toStationCode": "GGTA",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GGTA",
+      "toStationCode": "DTE",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DTE",
+      "toStationCode": "KIG",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KIG",
+      "toStationCode": "MCA",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MCA",
+      "toStationCode": "NDGJ",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NDGJ",
+      "toStationCode": "BOP",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BOP",
+      "toStationCode": "NPMR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NPMR",
+      "toStationCode": "PKU",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PKU",
+      "toStationCode": "KHAI",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KHAI",
+      "toStationCode": "HAUR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HAUR",
+      "toStationCode": "RDU",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RDU",
+      "toStationCode": "DUAN",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DUAN",
+      "toStationCode": "BCK",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BCK",
+      "toStationCode": "SMCK",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SMCK",
+      "toStationCode": "MPD",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MPD",
+      "toStationCode": "JPR",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "JPR",
+      "toStationCode": "KGP",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KGP",
+      "toStationCode": "GMDN",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GMDN",
+      "toStationCode": "GKL",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "GKL",
+      "toStationCode": "CSY",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 4,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "CSY",
+      "toStationCode": "MDN",
+      "routeId": "SER_HWH_MIDNAPORE",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "PKU",
+      "toStationCode": "RGX",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 8,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RGX",
+      "toStationCode": "RGA",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 8,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RGA",
+      "toStationCode": "SMTG",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SMTG",
+      "toStationCode": "TMZ",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TMZ",
+      "toStationCode": "KSBP",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KSBP",
+      "toStationCode": "SSPH",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SSPH",
+      "toStationCode": "MSDL",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "MSDL",
+      "toStationCode": "BRDB",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 8,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BRDB",
+      "toStationCode": "BYSA",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BYSA",
+      "toStationCode": "DZK",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DZK",
+      "toStationCode": "DZKT",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DZKT",
+      "toStationCode": "SLPR",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SLPR",
+      "toStationCode": "BAAR",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BAAR",
+      "toStationCode": "HLZ",
+      "routeId": "SER_PANSKURA_HALDIA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TMZ",
+      "toStationCode": "NDKR",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 10,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NDKR",
+      "toStationCode": "LSGS",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 11,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "LSGS",
+      "toStationCode": "DSPN",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 11,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "DSPN",
+      "toStationCode": "HEN",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 7,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "HEN",
+      "toStationCode": "NCN",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 12,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "NCN",
+      "toStationCode": "KATI",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 11,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "KATI",
+      "toStationCode": "STLB",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "STLB",
+      "toStationCode": "SJPA",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 3,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "SJPA",
+      "toStationCode": "APRD",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 5,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "APRD",
+      "toStationCode": "BDPA",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "BDPA",
+      "toStationCode": "RMRB",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 8,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "RMRB",
+      "toStationCode": "TKRA",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 2,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    },
+    {
+      "fromStationCode": "TKRA",
+      "toStationCode": "DGHA",
+      "routeId": "SER_TAMLUK_DIGHA",
+      "distanceKm": 6,
+      "distanceStatus": "derived_from_published_cumulative_km"
+    }
+  ],
+  "dataQuality": {
+    "routeCount": 26,
+    "stationMasterCount": 237,
+    "trackSegmentCount": 244,
+    "routeCoverage": "Some routes populated; remaining route station sequences intentionally left empty pending verification.",
+    "stationKmMeaning": "Cumulative route distance shown in source material. It may differ from official fare distance.",
+    "nullStationCodeMeaning": "Station code not reliably established in source used.",
+    "nullStationKmMeaning": "A dependable cumulative kilometre value was not established; do not interpolate for fares."
+  }
+}

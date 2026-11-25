@@ -1,0 +1,6 @@
+{
+  "name": "RailOne",
+  "description": "Your All-in-One App by Indian Railways — Book reserved and unreserved tickets, track live trains, check PNR status, find coach positions, order onboard food, and access Rail Madad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

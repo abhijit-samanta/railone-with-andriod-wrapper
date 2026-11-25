@@ -1,0 +1,8 @@
+{
+	"appId": "in.railone.app",
+	"appName": "RailOne",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}

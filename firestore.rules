@@ -1,0 +1,349 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global safety net: deny all unmatched paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // -------------------------------------------------------------------------
+    // Global Helpers
+    // -------------------------------------------------------------------------
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isOwner(userId) {
+      return isVerifiedUser() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isValidMpinCode(code) {
+      return code is string && code.size() == 6 && code.matches('^[A-Za-z0-9]{6}$');
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        request.auth.token.email == 'indsamantaabhijit3691@gmail.com'
+      );
+    }
+
+    // -------------------------------------------------------------------------
+    // Entity Validation Blueprints (Anti-Update-Gap)
+    // -------------------------------------------------------------------------
+    function isValidAdminRole(data) {
+      return data.keys().hasAll(['uid', 'email', 'createdAt']) &&
+        data.keys().hasOnly(['uid', 'email', 'createdAt']) &&
+        isValidId(data.uid) &&
+        data.email is string && data.email.size() > 0 && data.email.size() <= 160 &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidAdminConfig(data) {
+      return data.keys().hasAll(['enforceDeviceLock', 'lastBatchId', 'lastSerialNumber', 'lastGeneratedAt', 'updatedAt']) &&
+        data.keys().hasOnly(['enforceDeviceLock', 'lastBatchId', 'lastSerialNumber', 'lastGeneratedAt', 'updatedAt']) &&
+        data.enforceDeviceLock is bool &&
+        data.lastBatchId is string && data.lastBatchId.size() <= 64 &&
+        data.lastSerialNumber is int && data.lastSerialNumber >= 0 &&
+        data.lastGeneratedAt is string && data.lastGeneratedAt.size() <= 40 &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidMpinCodeDoc(data) {
+      return data.keys().hasAll([
+          'mpin', 'serialNumber', 'batchId', 'status', 'ownerUid',
+          'deviceId', 'deviceLocked', 'totalLoginCount', 'failedAttempts',
+          'generatedAt', 'expiresAt', 'firstLoginAt', 'lastLoginAt', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'mpin', 'serialNumber', 'batchId', 'status', 'ownerUid',
+          'deviceId', 'deviceLocked', 'totalLoginCount', 'failedAttempts',
+          'generatedAt', 'expiresAt', 'firstLoginAt', 'lastLoginAt', 'updatedAt'
+        ]) &&
+        isValidMpinCode(data.mpin) &&
+        data.serialNumber is int && data.serialNumber >= 1 &&
+        data.batchId is string && data.batchId.size() > 0 && data.batchId.size() <= 64 &&
+        data.status in ['Active', 'Used', 'Blocked', 'Expired'] &&
+        data.ownerUid is string && data.ownerUid.size() <= 128 &&
+        data.deviceId is string && data.deviceId.size() <= 128 &&
+        data.deviceLocked is bool &&
+        data.totalLoginCount is int && data.totalLoginCount >= 0 &&
+        data.failedAttempts is int && data.failedAttempts >= 0 &&
+        data.generatedAt is timestamp &&
+        data.expiresAt is string && data.expiresAt.size() <= 40 &&
+        data.firstLoginAt is string && data.firstLoginAt.size() <= 40 &&
+        data.lastLoginAt is string && data.lastLoginAt.size() <= 40 &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidMpinClaim(data) {
+      return data.keys().hasAll([
+          'mpin', 'serialNumber', 'ownerUid', 'boundUserKey',
+          'boundUserName', 'boundUserMobile', 'deviceId', 'deviceType',
+          'firstLoginAt', 'lastLoginAt', 'totalLoginCount', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'mpin', 'serialNumber', 'ownerUid', 'boundUserKey',
+          'boundUserName', 'boundUserMobile', 'deviceId', 'deviceType',
+          'firstLoginAt', 'lastLoginAt', 'totalLoginCount', 'updatedAt'
+        ]) &&
+        isValidMpinCode(data.mpin) &&
+        data.serialNumber is int && data.serialNumber >= 1 &&
+        isValidId(data.ownerUid) &&
+        isValidId(data.boundUserKey) &&
+        data.boundUserName is string && data.boundUserName.size() > 0 && data.boundUserName.size() <= 100 &&
+        data.boundUserMobile is string && data.boundUserMobile.size() >= 10 && data.boundUserMobile.size() <= 15 &&
+        data.deviceId is string && data.deviceId.size() > 0 && data.deviceId.size() <= 128 &&
+        data.deviceType in ['Android', 'iOS'] &&
+        data.firstLoginAt is timestamp &&
+        data.lastLoginAt is timestamp &&
+        data.totalLoginCount is int && data.totalLoginCount >= 1 &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidLoginLog(data) {
+      return data.keys().hasAll(['actorUid', 'mpin', 'outcome', 'reason', 'deviceId', 'deviceType', 'attemptedAt']) &&
+        data.keys().hasOnly(['actorUid', 'mpin', 'outcome', 'reason', 'deviceId', 'deviceType', 'attemptedAt']) &&
+        isValidId(data.actorUid) &&
+        data.mpin is string && data.mpin.size() > 0 && data.mpin.size() <= 12 &&
+        data.outcome in ['Success', 'Failed'] &&
+        data.reason is string && data.reason.size() > 0 && data.reason.size() <= 200 &&
+        data.deviceId is string && data.deviceId.size() <= 128 &&
+        data.deviceType in ['Android', 'iOS'] &&
+        data.attemptedAt is timestamp;
+    }
+
+    function isValidUserRoot(data) {
+      return data.keys().hasAll(['uid', 'email', 'displayName', 'activeAccountKey', 'createdAt', 'updatedAt']) &&
+        data.keys().hasOnly(['uid', 'email', 'displayName', 'activeAccountKey', 'createdAt', 'updatedAt']) &&
+        isValidId(data.uid) &&
+        data.email is string && data.email.size() > 0 && data.email.size() <= 160 &&
+        data.displayName is string && data.displayName.size() <= 100 &&
+        data.activeAccountKey is string && data.activeAccountKey.size() <= 80 &&
+        data.createdAt is timestamp &&
+        data.updatedAt is timestamp;
+    }
+
+    function isValidProfileMap(p) {
+      return p is map &&
+        p.keys().size() <= 30 &&
+        p.keys().hasAll(['name', 'userId', 'mobile', 'rWalletBalance', 'mpinSet', 'isGuest']) &&
+        p.name is string && p.name.size() <= 100 &&
+        p.userId is string && p.userId.size() <= 80 &&
+        p.mobile is string && p.mobile.size() <= 15 &&
+        (p.rWalletBalance is int || p.rWalletBalance is float) &&
+        p.rWalletBalance >= 0 && p.rWalletBalance <= 1000000 &&
+        p.mpinSet is bool &&
+        p.isGuest is bool;
+    }
+
+    function isValidUserAccount(data) {
+      return data.keys().hasAll([
+          'ownerUid', 'accountKey', 'mpin', 'profile',
+          'bookings', 'savedPassengers', 'walletTransactions',
+          'complaints', 'feedbacks', 'createdAt', 'updatedAt'
+        ]) &&
+        data.keys().hasOnly([
+          'ownerUid', 'accountKey', 'mpin', 'profile',
+          'bookings', 'savedPassengers', 'walletTransactions',
+          'complaints', 'feedbacks', 'createdAt', 'updatedAt'
+        ]) &&
+        isValidId(data.ownerUid) &&
+        isValidId(data.accountKey) &&
+        data.mpin is string && data.mpin.size() <= 6 &&
+        isValidProfileMap(data.profile) &&
+        data.bookings is list && data.bookings.size() <= 200 &&
+        (data.bookings.size() == 0 || data.bookings[0] is map) &&
+        data.savedPassengers is list && data.savedPassengers.size() <= 100 &&
+        (data.savedPassengers.size() == 0 || data.savedPassengers[0] is map) &&
+        data.walletTransactions is list && data.walletTransactions.size() <= 300 &&
+        (data.walletTransactions.size() == 0 || data.walletTransactions[0] is map) &&
+        data.complaints is list && data.complaints.size() <= 100 &&
+        (data.complaints.size() == 0 || data.complaints[0] is map) &&
+        data.feedbacks is list && data.feedbacks.size() <= 100 &&
+        (data.feedbacks.size() == 0 || data.feedbacks[0] is map) &&
+        data.createdAt is timestamp &&
+        data.updatedAt is timestamp;
+    }
+
+    // -------------------------------------------------------------------------
+    // Collection Rules
+    // -------------------------------------------------------------------------
+    match /admins/{uid} {
+      allow get: if isVerifiedUser() && isValidId(uid) && (request.auth.uid == uid || isAdmin());
+      allow list: if isAdmin();
+      allow create: if isAdmin() && isValidId(uid) && isValidAdminRole(incoming()) &&
+        incoming().uid == uid && incoming().createdAt == request.time;
+      allow update: if false;
+      allow delete: if isAdmin() && isValidId(uid);
+    }
+
+    match /adminConfig/{configId} {
+      allow get: if isAdmin() && isValidId(configId);
+      allow list: if false;
+      allow create: if isAdmin() && isValidId(configId) && isValidAdminConfig(incoming()) &&
+        incoming().updatedAt == request.time;
+      allow update: if isAdmin() && isValidId(configId) && isValidAdminConfig(incoming()) &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'enforceDeviceLock', 'lastBatchId', 'lastSerialNumber', 'lastGeneratedAt', 'updatedAt'
+        ]);
+      allow delete: if false;
+    }
+
+    match /mpinCodes/{mpin} {
+      // Non-admins can only read non-existent probes, unclaimed codes by exact 6-char ID, or codes they own
+      allow get: if isAdmin() || (
+        isVerifiedUser() && isValidMpinCode(mpin) &&
+        (resource == null || existing().ownerUid == '' || existing().ownerUid == request.auth.uid)
+      );
+      allow list: if isAdmin();
+      allow create: if isAdmin() && isValidMpinCode(mpin) && isValidMpinCodeDoc(incoming()) &&
+        incoming().mpin == mpin &&
+        incoming().ownerUid == '' &&
+        incoming().totalLoginCount == 0 &&
+        incoming().failedAttempts == 0 &&
+        incoming().generatedAt == request.time &&
+        incoming().updatedAt == request.time;
+      allow update: if isVerifiedUser() && isValidMpinCode(mpin) && isValidMpinCodeDoc(incoming()) &&
+        incoming().mpin == existing().mpin &&
+        incoming().serialNumber == existing().serialNumber &&
+        incoming().batchId == existing().batchId &&
+        incoming().generatedAt == existing().generatedAt &&
+        incoming().updatedAt == request.time && (
+          (isAdmin() && incoming().diff(existing()).affectedKeys().hasOnly([
+            'status', 'deviceId', 'deviceLocked', 'failedAttempts', 'expiresAt', 'ownerUid', 'updatedAt'
+          ])) ||
+          (existing().status == 'Active' && existing().ownerUid == '' &&
+            incoming().status == 'Used' &&
+            incoming().ownerUid == request.auth.uid &&
+            incoming().totalLoginCount == existing().totalLoginCount + 1 &&
+            incoming().failedAttempts == existing().failedAttempts &&
+            incoming().diff(existing()).affectedKeys().hasOnly([
+              'status', 'ownerUid', 'deviceId', 'firstLoginAt', 'lastLoginAt', 'totalLoginCount', 'updatedAt'
+            ]) &&
+            existsAfter(/databases/$(database)/documents/mpinClaims/$(mpin))
+          ) ||
+          (existing().status == 'Used' && existing().ownerUid == request.auth.uid &&
+            incoming().status == 'Used' &&
+            incoming().ownerUid == existing().ownerUid &&
+            incoming().firstLoginAt == existing().firstLoginAt &&
+            incoming().totalLoginCount == existing().totalLoginCount + 1 &&
+            incoming().failedAttempts == existing().failedAttempts &&
+            incoming().diff(existing()).affectedKeys().hasOnly([
+              'deviceId', 'lastLoginAt', 'totalLoginCount', 'updatedAt'
+            ])
+          )
+        );
+      allow delete: if isAdmin() && isValidMpinCode(mpin);
+    }
+
+    match /mpinClaims/{mpin} {
+      allow get: if isAdmin() || (
+        isVerifiedUser() && isValidMpinCode(mpin) &&
+        (resource == null || existing().ownerUid == request.auth.uid)
+      );
+      allow list: if isAdmin();
+      allow create: if isVerifiedUser() && isValidMpinCode(mpin) && isValidMpinClaim(incoming()) &&
+        incoming().mpin == mpin &&
+        incoming().ownerUid == request.auth.uid &&
+        incoming().totalLoginCount == 1 &&
+        incoming().firstLoginAt == request.time &&
+        incoming().lastLoginAt == request.time &&
+        incoming().updatedAt == request.time &&
+        getAfter(/databases/$(database)/documents/mpinCodes/$(mpin)).data.ownerUid == request.auth.uid;
+      allow update: if isVerifiedUser() && isValidMpinCode(mpin) && isValidMpinClaim(incoming()) &&
+        incoming().mpin == existing().mpin &&
+        incoming().serialNumber == existing().serialNumber &&
+        incoming().ownerUid == existing().ownerUid &&
+        incoming().boundUserKey == existing().boundUserKey &&
+        incoming().firstLoginAt == existing().firstLoginAt &&
+        incoming().updatedAt == request.time && (
+          (isAdmin() && incoming().diff(existing()).affectedKeys().hasOnly([
+            'boundUserName', 'boundUserMobile', 'deviceId', 'deviceType', 'updatedAt'
+          ])) ||
+          (existing().ownerUid == request.auth.uid &&
+            incoming().totalLoginCount == existing().totalLoginCount + 1 &&
+            incoming().lastLoginAt == request.time &&
+            incoming().diff(existing()).affectedKeys().hasOnly([
+              'deviceId', 'deviceType', 'lastLoginAt', 'totalLoginCount', 'updatedAt'
+            ]))
+        );
+      allow delete: if isAdmin() && isValidMpinCode(mpin);
+    }
+
+    match /loginLogs/{logId} {
+      allow get: if isAdmin() && isValidId(logId);
+      allow list: if isAdmin();
+      allow create: if isVerifiedUser() && isValidId(logId) && isValidLoginLog(incoming()) &&
+        incoming().actorUid == request.auth.uid &&
+        incoming().attemptedAt == request.time;
+      allow update: if false;
+      allow delete: if isAdmin() && isValidId(logId);
+    }
+
+    match /users/{userId} {
+      allow get: if isAdmin() || (isOwner(userId) && isValidId(userId));
+      allow list: if isAdmin();
+      allow create: if isOwner(userId) && isValidId(userId) && isValidUserRoot(incoming()) &&
+        incoming().uid == request.auth.uid &&
+        incoming().createdAt == request.time &&
+        incoming().updatedAt == request.time;
+      allow update: if isOwner(userId) && isValidId(userId) && isValidUserRoot(incoming()) &&
+        incoming().uid == existing().uid &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly([
+          'email', 'displayName', 'activeAccountKey', 'updatedAt'
+        ]);
+      allow delete: if false;
+
+      match /accounts/{accountKey} {
+        allow get: if isAdmin() || (
+          isOwner(userId) && isValidId(userId) && isValidId(accountKey) &&
+          (resource == null || existing().ownerUid == request.auth.uid)
+        );
+        allow list: if isAdmin() || (
+          isOwner(userId) && resource.data.ownerUid == request.auth.uid
+        );
+        allow create: if isOwner(userId) && isValidId(userId) && isValidId(accountKey) &&
+          exists(/databases/$(database)/documents/users/$(userId)) &&
+          isValidUserAccount(incoming()) &&
+          incoming().ownerUid == request.auth.uid &&
+          incoming().accountKey == accountKey &&
+          incoming().createdAt == request.time &&
+          incoming().updatedAt == request.time;
+        allow update: if isOwner(userId) && isValidId(userId) && isValidId(accountKey) &&
+          exists(/databases/$(database)/documents/users/$(userId)) &&
+          isValidUserAccount(incoming()) &&
+          incoming().ownerUid == existing().ownerUid &&
+          incoming().accountKey == existing().accountKey &&
+          incoming().createdAt == existing().createdAt &&
+          incoming().updatedAt == request.time &&
+          (existing().mpin == '' || incoming().mpin == existing().mpin) &&
+          incoming().diff(existing()).affectedKeys().hasOnly([
+            'mpin', 'profile', 'bookings', 'savedPassengers',
+            'walletTransactions', 'complaints', 'feedbacks', 'updatedAt'
+          ]);
+        allow delete: if isAdmin() && isValidId(userId) && isValidId(accountKey);
+      }
+    }
+  }
+}

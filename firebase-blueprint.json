@@ -1,0 +1,360 @@
+{
+  "entities": {
+    "AdminRole": {
+      "title": "AdminRole",
+      "description": "Authorized admin role document keyed by Firebase Auth UID.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "createdAt"]
+    },
+    "AdminConfig": {
+      "title": "AdminConfig",
+      "description": "Global Admin MPIN generation and security lock configuration.",
+      "type": "object",
+      "properties": {
+        "enforceDeviceLock": {
+          "type": "boolean"
+        },
+        "lastBatchId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "lastSerialNumber": {
+          "type": "integer"
+        },
+        "lastGeneratedAt": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["enforceDeviceLock", "lastBatchId", "lastSerialNumber", "lastGeneratedAt", "updatedAt"]
+    },
+    "MpinCode": {
+      "title": "MpinCode",
+      "description": "6-character alphanumeric MPIN token record without PII.",
+      "type": "object",
+      "properties": {
+        "mpin": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 6,
+          "pattern": "^[A-Za-z0-9]{6}$"
+        },
+        "serialNumber": {
+          "type": "integer"
+        },
+        "batchId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Used", "Blocked", "Expired"]
+        },
+        "ownerUid": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "deviceId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "deviceLocked": {
+          "type": "boolean"
+        },
+        "totalLoginCount": {
+          "type": "integer"
+        },
+        "failedAttempts": {
+          "type": "integer"
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expiresAt": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "firstLoginAt": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "lastLoginAt": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "mpin",
+        "serialNumber",
+        "batchId",
+        "status",
+        "ownerUid",
+        "deviceId",
+        "deviceLocked",
+        "totalLoginCount",
+        "failedAttempts",
+        "generatedAt",
+        "expiresAt",
+        "firstLoginAt",
+        "lastLoginAt",
+        "updatedAt"
+      ]
+    },
+    "MpinClaim": {
+      "title": "MpinClaim",
+      "description": "PII-isolated claim binding an MPIN to its verified owner and device.",
+      "type": "object",
+      "properties": {
+        "mpin": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 6,
+          "pattern": "^[A-Za-z0-9]{6}$"
+        },
+        "serialNumber": {
+          "type": "integer"
+        },
+        "ownerUid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "boundUserKey": {
+          "type": "string",
+          "maxLength": 80,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "boundUserName": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "boundUserMobile": {
+          "type": "string",
+          "maxLength": 15
+        },
+        "deviceId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "deviceType": {
+          "type": "string",
+          "enum": ["Android", "iOS"]
+        },
+        "firstLoginAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastLoginAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "totalLoginCount": {
+          "type": "integer"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "mpin",
+        "serialNumber",
+        "ownerUid",
+        "boundUserKey",
+        "boundUserName",
+        "boundUserMobile",
+        "deviceId",
+        "deviceType",
+        "firstLoginAt",
+        "lastLoginAt",
+        "totalLoginCount",
+        "updatedAt"
+      ]
+    },
+    "LoginAuditLog": {
+      "title": "LoginAuditLog",
+      "description": "Audit log of MPIN authentication attempts.",
+      "type": "object",
+      "properties": {
+        "actorUid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "mpin": {
+          "type": "string",
+          "maxLength": 12,
+          "pattern": "^[A-Za-z0-9_-]+$"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": ["Success", "Failed"]
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "deviceId": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "deviceType": {
+          "type": "string",
+          "enum": ["Android", "iOS"]
+        },
+        "attemptedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["actorUid", "mpin", "outcome", "reason", "deviceId", "deviceType", "attemptedAt"]
+    },
+    "UserRoot": {
+      "title": "UserRoot",
+      "description": "Root identity document linking a verified Google account to RailOne accounts.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "displayName": {
+          "type": "string",
+          "maxLength": 100
+        },
+        "activeAccountKey": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "displayName", "activeAccountKey", "createdAt", "updatedAt"]
+    },
+    "UserAccount": {
+      "title": "UserAccount",
+      "description": "Isolated RailOne user profile, R-Wallet, bookings, passengers, and transactions.",
+      "type": "object",
+      "properties": {
+        "ownerUid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "accountKey": {
+          "type": "string",
+          "maxLength": 80,
+          "pattern": "^[a-zA-Z0-9_-]+$"
+        },
+        "mpin": {
+          "type": "string",
+          "maxLength": 6
+        },
+        "profile": {
+          "type": "object"
+        },
+        "bookings": {
+          "type": "array"
+        },
+        "savedPassengers": {
+          "type": "array"
+        },
+        "walletTransactions": {
+          "type": "array"
+        },
+        "complaints": {
+          "type": "array"
+        },
+        "feedbacks": {
+          "type": "array"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "ownerUid",
+        "accountKey",
+        "mpin",
+        "profile",
+        "bookings",
+        "savedPassengers",
+        "walletTransactions",
+        "complaints",
+        "feedbacks",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/admins/{uid}": {
+      "schema": { "$ref": "#/entities/AdminRole" },
+      "description": "Authorized admin UIDs."
+    },
+    "/adminConfig/{configId}": {
+      "schema": { "$ref": "#/entities/AdminConfig" },
+      "description": "Global admin security settings and MPIN batch sequence state."
+    },
+    "/mpinCodes/{mpin}": {
+      "schema": { "$ref": "#/entities/MpinCode" },
+      "description": "Admin-generated 6-character alphanumeric MPIN tokens (PII-free)."
+    },
+    "/mpinClaims/{mpin}": {
+      "schema": { "$ref": "#/entities/MpinClaim" },
+      "description": "PII-isolated MPIN ownership, user binding, and login tracking."
+    },
+    "/loginLogs/{logId}": {
+      "schema": { "$ref": "#/entities/LoginAuditLog" },
+      "description": "Audit trail of MPIN authentication attempts."
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserRoot" },
+      "description": "Authenticated user root document."
+    },
+    "/users/{userId}/accounts/{accountKey}": {
+      "schema": { "$ref": "#/entities/UserAccount" },
+      "description": "Per-user RailOne account snapshot stored as native Firestore maps and arrays."
+    }
+  }
+}

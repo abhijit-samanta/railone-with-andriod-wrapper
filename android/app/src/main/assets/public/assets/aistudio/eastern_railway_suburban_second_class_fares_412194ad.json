@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "railway": "Eastern Railway",
+    "service": "Suburban",
+    "ticketType": "Single journey",
+    "class": "Second Class Ordinary",
+    "currency": "INR",
+    "distanceUnit": "km",
+    "fareBasis": "Official Eastern Railway suburban second-class fare chart",
+    "fareChartPublished": "Eastern Railway Combined Suburban Time Table, 2015",
+    "lastConfirmedUnchangedBy": "Ministry of Railways fare notification effective 2025-12-26",
+    "coverage": {
+      "minimumDistanceKm": 1,
+      "maximumDistanceKm": 500,
+      "note": "The published Eastern Railway chart provides this suburban second-class table up to 500 km. Do not extrapolate beyond 500 km."
+    },
+    "sources": [
+      "https://er.indianrailways.gov.in/ticker/1443528021651SUB_TT-2015.pdf",
+      "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2208532&lang=1&reg=3"
+    ]
+  },
+  "fareRules": {
+    "minimumAdultFareINR": 5,
+    "minimumChargeableFareINR": 5,
+    "childAgeRule": "Eastern Railway chart states children above 5 years and under 12 years are charged half the corresponding adult fare.",
+    "childFareCalculation": "Half of the adult fare for the applicable distance slab; confirm applicable rounding at ticket issuance.",
+    "additionalCharges": {
+      "reservationFee": 0,
+      "superfastSurcharge": 0,
+      "gst": "No separate GST amount is specified for this ordinary suburban unreserved fare table; apply only if an applicable current railway instruction requires it.",
+      "bookingAgentCommission": {
+        "amountINR": 1,
+        "appliesWhen": "Only when ticket is purchased through an authorised JTBS agent, as stated in the cited older Eastern Railway timetable; verify current instructions before applying.",
+        "includedInBaseFare": false
+      }
+    },
+    "rounding": "Use the fare printed/quoted by the current UTS/PRS or booking system where available. Do not invent rounding rules for child fares.",
+    "distanceRule": "Use the railway-approved route distance between the origin and destination, not straight-line distance."
+  },
+  "slabs": [
+    {
+      "fromKm": 1,
+      "toKm": 20,
+      "adultFareINR": 5
+    },
+    {
+      "fromKm": 21,
+      "toKm": 45,
+      "adultFareINR": 10
+    },
+    {
+      "fromKm": 46,
+      "toKm": 70,
+      "adultFareINR": 15
+    },
+    {
+      "fromKm": 71,
+      "toKm": 80,
+      "adultFareINR": 20
+    },
+    {
+      "fromKm": 81,
+      "toKm": 115,
+      "adultFareINR": 25
+    },
+    {
+      "fromKm": 116,
+      "toKm": 140,
+      "adultFareINR": 30
+    },
+    {
+      "fromKm": 141,
+      "toKm": 170,
+      "adultFareINR": 35
+    },
+    {
+      "fromKm": 171,
+      "toKm": 200,
+      "adultFareINR": 40
+    },
+    {
+      "fromKm": 201,
+      "toKm": 230,
+      "adultFareINR": 45
+    },
+    {
+      "fromKm": 231,
+      "toKm": 270,
+      "adultFareINR": 50
+    },
+    {
+      "fromKm": 271,
+      "toKm": 295,
+      "adultFareINR": 55
+    },
+    {
+      "fromKm": 296,
+      "toKm": 320,
+      "adultFareINR": 60
+    },
+    {
+      "fromKm": 321,
+      "toKm": 360,
+      "adultFareINR": 65
+    },
+    {
+      "fromKm": 361,
+      "toKm": 400,
+      "adultFareINR": 70
+    },
+    {
+      "fromKm": 401,
+      "toKm": 420,
+      "adultFareINR": 75
+    },
+    {
+      "fromKm": 421,
+      "toKm": 460,
+      "adultFareINR": 80
+    },
+    {
+      "fromKm": 461,
+      "toKm": 480,
+      "adultFareINR": 85
+    },
+    {
+      "fromKm": 481,
+      "toKm": 500,
+      "adultFareINR": 90
+    }
+  ]
+}
